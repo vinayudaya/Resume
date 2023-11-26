@@ -1,4 +1,25 @@
 body{
     background-color: #C5FFF8;
-    color: #7B66FF;
+    height:100%;
+}
+.justify {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+.fixed {
+    background-color:#00d5ff;
+    color:white;
+}
+.div1{
+    display: block;
+}
+.div2{
+    display: none;
+}
+.div1:hover ~ .div2{
+    display: block;
+  }
+.selected:hover{
+    background-color: black;
 }
