@@ -1,5 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* VARIABLES */
+/* || RESET */
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea{
+    font: inherit;
+}
+
+:root{
+    --BODY-COLOR: hsl(209, 68%, 40%);
+    --BODY-BGCOLOR: whitesmoke ;
+}
 body{
-    background-color: #C5FFF8;
+    font-family: 'Nunito', sans-serif;
     height:100%;
 }
 .justify {
@@ -8,11 +35,11 @@ body{
   }
 
 .fixed {
-    background-color:#00d5ff;
-    color:white;
+    background-color: var(--BODY-BGCOLOR);
 }
 .div1{
     display: block;
+    
 }
 .div2{
     display: none;
@@ -21,5 +48,69 @@ body{
     display: block;
   }
 .selected:hover{
-    background-color: black;
+    background-color: var(--BODY-BGCOLOR);
+}
+#nav1{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   padding: 0.2rem;
+    gap: 3rem;
+    font-size: 1.1rem;
+}
+.nav-item{
+    background-color: var(--BODY-BGCOLOR);
+}
+.nav-item a{
+    color: var(--BODY-COLOR);
+}
+.nav-item a:hover{
+    color:hsl(0, 0%, 20%,0.5);
+}
+.nav-item a:active{
+    color:lightblue;
+}
+#myCarousel{
+    box-shadow: 0 0 10px blue;
+}
+.Skills{
+    margin: 0;
+    padding: 0;
+}
+#skills{
+    background-color: var(--BODY-BGCOLOR);
+    font-weight: 700;
+}
+nav{
+    box-shadow: 0 0 10px #333 ;
+}
+.bd-placeholder-img rect{
+    fill:darkblue;
+}
+.carousel-caption{
+    display: grid;
+    justify-content: center;
+}
+.Skills .col{
+    border: 5px double var(--BODY-COLOR);
+    width: 100%;
+}
+.Skills .row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 2ch;
+}
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    box-shadow: 0 0 10px var(--BODY-COLOR);
+}
+
+#Projects .card:hover{
+    filter:drop-shadow(0 0 2em hsl(175, 79%, 26%) )
 }
