@@ -10,7 +10,19 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
 img{
     display: block;
     max-width: 100%;
@@ -42,7 +54,7 @@ body{
     background-color: var(--BODY-BGCOLOR);
 }
 #nav1{
-    background-color: white;
+    background-color: whitesmoke;
     justify-content: space-around;
    padding: 0.2rem;
     font-size: 1.1rem;
@@ -66,9 +78,10 @@ body{
     margin: 0;
     padding: 0;
 }
-#skills{
+#Skills{
     background-color: var(--BODY-BGCOLOR);
     font-weight: 700;
+    text-align: center;
 }
 nav{
     box-shadow: 0 0 10px #333 ;
@@ -97,13 +110,29 @@ h2{
     font-size: 3rem;
     box-shadow: 0 0 10px var(--BODY-COLOR);
 }
-
 #Projects .card:hover{
     filter:drop-shadow(0 0 2em hsl(175, 79%, 26%) )
 }
-@media (max-width: 425px) {
+
+@media (max-width: 1024px) {
+    .Skills .row{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: auto;
+    }
+}
+@media (max-width: 768px) {
+    .Skills .row{
+        width: 100%;
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        margin: auto;
+    }
+}
+@media (max-width: 476px) {
     #nav1{
-        background-color: white;
+        background-color: whitesmoke;
         padding: 0;
         justify-content: center;
     }
@@ -123,4 +152,3 @@ h2{
         flex:1;
     }
 }
-
