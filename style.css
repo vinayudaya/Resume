@@ -28,7 +28,7 @@ input, button, textarea{
     --CAROUSEL-COLOR: hsl(209, 68%, 40%);
     --BOX-SHADOW-COLOR: #333;
 }
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --BODY-COLOR: whitesmoke;
         --BODY-BGCOLOR:  #333;
@@ -37,7 +37,7 @@ input, button, textarea{
         --CAROUSEL-COLOR: rgba(12, 110, 73, 0.553);
         --BOX-SHADOW-COLOR: GREEN;
     }
-  } */
+  }
 body{
     font-family: 'Nunito', sans-serif;
     height:100%;
