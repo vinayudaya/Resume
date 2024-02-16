@@ -10,19 +10,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-:root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --foreground-rgb: 255, 255, 255;
-      --background-start-rgb: 0, 0, 0;
-      --background-end-rgb: 0, 0, 0;
-    }
-  }
 img{
     display: block;
     max-width: 100%;
@@ -36,10 +23,29 @@ input, button, textarea{
 :root{
     --BODY-COLOR: hsl(209, 68%, 40%);
     --BODY-BGCOLOR: whitesmoke ;
+    --NAV-HOVER: red;
+    --NAV-ACTIVE: darkgreen;
+    --CAROUSEL-COLOR: hsl(209, 68%, 40%);
+    --BOX-SHADOW-COLOR: #333;
 }
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --BODY-COLOR: whitesmoke;
+        --BODY-BGCOLOR:  #333;
+        --NAV-HOVER: rgb(16, 206, 16);
+        --NAV-ACTIVE: lightblue;
+        --CAROUSEL-COLOR: rgba(12, 110, 73, 0.553);
+        --BOX-SHADOW-COLOR: GREEN;
+    }
+  } */
 body{
     font-family: 'Nunito', sans-serif;
     height:100%;
+    background-color: var(--BODY-BGCOLOR);
+    color: var(--BODY-COLOR);
+}
+h3{
+    text-align: center;
 }
 .justify {
     text-align: justify;
@@ -49,12 +55,8 @@ body{
 .fixed {
     background-color: var(--BODY-BGCOLOR);
 }
-
-.selected:hover{
-    background-color: var(--BODY-BGCOLOR);
-}
 #nav1{
-    background-color: whitesmoke;
+    background-color: var(--BODY-BGCOLOR);
     justify-content: space-around;
    padding: 0.2rem;
     font-size: 1.1rem;
@@ -66,13 +68,22 @@ body{
     color: var(--BODY-COLOR);
 }
 .nav-item a:hover{
-    color:hsl(0, 0%, 20%,0.5);
+    color:var(--NAV-HOVER);
 }
 .nav-item a:active{
-    color:lightblue;
+    color:var(--NAV-ACTIVE);
 }
 #myCarousel{
-    box-shadow: 0 0 10px blue;
+    box-shadow: 0 0 10px var(--BOX-SHADOW-COLOR);
+}
+#myCarousel .btn-primary{
+    color: var(--BODY-COLOR);
+    border:var(--BODY-BGCOLOR);
+    background-color: var(--BODY-BGCOLOR);
+}
+#myCarousel .btn-primary:hover{
+    color:white;
+    background-color: black;
 }
 .Skills{
     margin: 0;
@@ -84,34 +95,69 @@ body{
     text-align: center;
 }
 nav{
-    box-shadow: 0 0 10px #333 ;
+    box-shadow: 0 0 10px var(--BOX-SHADOW-COLOR) ;
 }
 .bd-placeholder-img rect{
-    fill:darkblue;
+    fill:var(--CAROUSEL-COLOR);
 }
 .carousel-caption{
     display: grid;
     justify-content: center;
 }
 .Skills .col{
-    border: 5px double var(--BODY-COLOR);
+    border: 5px double var(--BOX-SHADOW-COLOR);
     width: 100%;
 }
 .Skills .row{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     column-gap: 2ch;
+}
+.Skills .d-flex{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    gap:10px
+}
+.d-flex svg{
+    width: 30;
+    height: 30;
+}
+.block{
+    display: block;
 }
 h2{
     text-align: center;
     font-weight: bold;
     font-size: 3rem;
-    box-shadow: 0 0 10px var(--BODY-COLOR);
+    box-shadow: 0 0 10px var(--BOX-SHADOW-COLOR);
 }
 #Projects .card:hover{
-    filter:drop-shadow(0 0 2em hsl(175, 79%, 26%) )
+    filter:drop-shadow(0 0 2em var(--BOX-SHADOW-COLOR))
+}
+.Education{
+    margin: auto;
+}
+.acme{
+    color:var(--BODY-COLOR)
+}
+.Skills h3{
+    text-transform: uppercase;
+    text-shadow: 0 0 10px var(--BOX-SHADOW-COLOR);
+}
+.coursework_a{
+    padding: auto;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+#Education h3{
+    background-color: var(--BODY-BGCOLOR);
+    margin: 0;
+    color: var(--BODY-COLOR);
 }
 
 @media (max-width: 1024px) {
@@ -130,14 +176,14 @@ h2{
         margin: auto;
     }
 }
-@media (max-width: 476px) {
-    #nav1{
-        background-color: whitesmoke;
-        padding: 0;
-        justify-content: center;
+@media (max-width:493px){
+    #nav1 .nav-link{
+        padding: 1vh;
     }
+}
+@media (max-width: 476px) {
     .Skills .col{
-        border: 5px double var(--BODY-COLOR);
+        border: 5px double var(--BOX-SHADOW-COLOR);
         width: 100%;
     }
     .Skills .row{
@@ -146,9 +192,24 @@ h2{
         grid-template-columns: 1fr;
         margin: auto;
     }
-
-
     .navbar .nav-item{
-        flex:1;
+        font-size: 0.8rem;
+    }
+    #nav1{
+        padding: 0;
+    }
+    #nav1 .nav-link{
+        padding: 0.9vh;
+    }
+    .fixed{
+    padding: 0;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    #Education h3{
+        background-color: var(--BODY-BGCOLOR);
+        margin: 0;
+        color: var(--BODY-COLOR);
     }
 }
