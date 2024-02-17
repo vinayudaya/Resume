@@ -21,12 +21,12 @@ input, button, textarea{
 }
 
 :root{
-    --BODY-COLOR: hsl(209, 68%, 40%);
-    --BODY-BGCOLOR: whitesmoke ;
-    --NAV-HOVER: red;
-    --NAV-ACTIVE: darkgreen;
-    --CAROUSEL-COLOR: hsl(209, 68%, 40%);
-    --BOX-SHADOW-COLOR: #333;
+    --BODY-COLOR: whitesmoke ;
+    --BODY-BGCOLOR:hsl(209, 68%, 40%) ;
+    --NAV-HOVER: black;
+    --NAV-ACTIVE: yellow;
+    --CAROUSEL-COLOR: hsl(166, 81%, 35%);
+    --BOX-SHADOW-COLOR: hsl(166, 81%, 35%);
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -159,7 +159,9 @@ h2{
     margin: 0;
     color: var(--BODY-COLOR);
 }
-
+footer{
+    border-top: solid var(--BOX-SHADOW-COLOR);
+}
 @media (max-width: 1024px) {
     .Skills .row{
         width: 100%;
