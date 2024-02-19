@@ -21,21 +21,24 @@ input, button, textarea{
 }
 
 :root{
-    --BODY-COLOR: whitesmoke ;
-    --BODY-BGCOLOR:hsl(209, 68%, 40%) ;
+    --BODY-COLOR:  hsl(209, 68%, 40%)  ;
+    --BODY-BGCOLOR:whitesmoke;
     --NAV-HOVER: black;
-    --NAV-ACTIVE: yellow;
+    --NAV-ACTIVE: black;
+    --NAV-COLOR: whitesmoke;
     --CAROUSEL-COLOR: hsl(166, 81%, 35%);
     --BOX-SHADOW-COLOR: hsl(166, 81%, 35%);
+    --CARD-COLOR: whitesmoke;
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --BODY-COLOR: whitesmoke;
         --BODY-BGCOLOR:  #333;
         --NAV-HOVER: rgb(16, 206, 16);
-        --NAV-ACTIVE: lightblue;
-        --CAROUSEL-COLOR: rgba(12, 110, 73, 0.553);
-        --BOX-SHADOW-COLOR: GREEN;
+        --NAV-ACTIVE: #31AFD4;
+        --NAV-COLOR: whitesmoke;
+        --CAROUSEL-COLOR: #D81159;
+        --BOX-SHADOW-COLOR: #e5d4ce;
     }
   }
 body{
@@ -68,7 +71,8 @@ h3{
     color: var(--BODY-COLOR);
 }
 .nav-item a:hover{
-    color:var(--NAV-HOVER);
+    color:var(--NAV-COLOR);
+    background-color: var(--NAV-ACTIVE);
 }
 .nav-item a:active{
     color:var(--NAV-ACTIVE);
@@ -82,8 +86,8 @@ h3{
     background-color: var(--BODY-BGCOLOR);
 }
 #myCarousel .btn-primary:hover{
-    color:white;
-    background-color: black;
+    color:var(--NAV-COLOR);
+    background-color: var(--NAV-ACTIVE);
 }
 .Skills{
     margin: 0;
@@ -106,14 +110,15 @@ nav{
 }
 .Skills .col{
     border: 5px double var(--BOX-SHADOW-COLOR);
-    width: 100%;
+    width: auto;
 }
 .Skills .row{
-    width: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 2ch;
 }
+
 .Skills .d-flex{
     width: 100%;
     text-align: center;
@@ -140,11 +145,11 @@ h2{
     margin: auto;
 }
 .acme{
-    color:var(--BODY-COLOR)
+    color:var(--CARD-COLOR)
 }
 .Skills h3{
     text-transform: uppercase;
-    text-shadow: 0 0 10px var(--BOX-SHADOW-COLOR);
+    color: var(--NAV-ACTIVE);
 }
 .coursework_a{
     padding: auto;
