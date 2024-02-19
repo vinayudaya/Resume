@@ -167,6 +167,11 @@ h2{
 footer{
     border-top: solid var(--BOX-SHADOW-COLOR);
 }
+#Coursework a:hover{
+    text-decoration: none;
+    color: var(--BODY-BGCOLOR);
+    background-color: var(--BODY-COLOR);
+}
 @media (max-width: 1024px) {
     .Skills .row{
         width: 100%;
