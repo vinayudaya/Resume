@@ -63,8 +63,7 @@ h3{
 #nav1{
     background-color: var(--BODY-BGCOLOR);
     justify-content: space-around;
-   padding: 0.2rem;
-    font-size: 1.1rem;
+    padding: 0.2rem;
 }
 .nav-item{
     background-color: var(--BODY-BGCOLOR);
@@ -226,8 +225,8 @@ footer{
         color: var(--BODY-COLOR);
     }
 }
-@media (max-width: 320px){
+@media (max-width: 359px){
     html{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 }
