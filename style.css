@@ -23,22 +23,24 @@ input, button, textarea{
 :root{
     --BODY-COLOR:  hsl(209, 68%, 40%)  ;
     --BODY-BGCOLOR:whitesmoke;
-    --NAV-HOVER: black;
-    --NAV-ACTIVE: black;
+    --NAV-ACTIVE: #566E3D;
     --NAV-COLOR: whitesmoke;
-    --CAROUSEL-COLOR: hsl(166, 81%, 35%);
-    --BOX-SHADOW-COLOR: hsl(166, 81%, 35%);
+    --CAROUSEL-COLOR: #542E71;
+    --BOX-SHADOW-COLOR: #6A66A3;
     --CARD-COLOR: whitesmoke;
+    --CAROUSEL-HOVER-BGCOLOR:BLACK;
+    --CAROUSEL-HOVER-COLOR: whitesmoke;
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --BODY-COLOR: whitesmoke;
         --BODY-BGCOLOR:  #333;
-        --NAV-HOVER: rgb(16, 206, 16);
-        --NAV-ACTIVE: #31AFD4;
+        --NAV-ACTIVE: #6A66A3;
         --NAV-COLOR: whitesmoke;
-        --CAROUSEL-COLOR: #D81159;
+        --CAROUSEL-COLOR: #6A66A3;
         --BOX-SHADOW-COLOR: #e5d4ce;
+        --CAROUSEL-HOVER-BGCOLOR:#B3CBB9;
+        --CAROUSEL-HOVER-COLOR: #302f2f;
     }
   }
 body{
@@ -86,8 +88,8 @@ h3{
     background-color: var(--BODY-BGCOLOR);
 }
 #myCarousel .btn-primary:hover{
-    color:var(--NAV-COLOR);
-    background-color: var(--NAV-ACTIVE);
+    color:var(--CAROUSEL-HOVER-COLOR);
+    background-color: var(--CAROUSEL-HOVER-BGCOLOR);
 }
 .Skills{
     margin: 0;
