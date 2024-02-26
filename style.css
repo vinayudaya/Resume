@@ -20,7 +20,7 @@ input, button, textarea{
     font: inherit;
 }
 
-:root{
+body.light{
     --BODY-COLOR:  hsl(209, 68%, 40%)  ;
     --BODY-BGCOLOR:whitesmoke;
     --NAV-ACTIVE: #566E3D;
@@ -31,23 +31,25 @@ input, button, textarea{
     --CAROUSEL-HOVER-BGCOLOR:BLACK;
     --CAROUSEL-HOVER-COLOR: whitesmoke;
 }
-@media (prefers-color-scheme: dark) {
-    :root {
-        --BODY-COLOR: #c5c5c5;
-        --BODY-BGCOLOR:  #333;
-        --NAV-ACTIVE: #6A66A3;
-        --NAV-COLOR: whitesmoke;
-        --CAROUSEL-COLOR: #6A66A3;
-        --BOX-SHADOW-COLOR: #000;
-        --CAROUSEL-HOVER-BGCOLOR:#000;
-        --CAROUSEL-HOVER-COLOR: #f5f5f5;
-    }
-  }
+
+body.dark {
+    --BODY-COLOR: #c5c5c5;
+    --BODY-BGCOLOR:  #333;
+    --NAV-ACTIVE: #6A66A3;
+    --NAV-COLOR: whitesmoke;
+    --CAROUSEL-COLOR: #6A66A3;
+    --BOX-SHADOW-COLOR: #000;
+    --CAROUSEL-HOVER-BGCOLOR:#000;
+    --CAROUSEL-HOVER-COLOR: #f5f5f5;
+}
 body{
     font-family: 'Nunito', sans-serif;
     height:100%;
     background-color: var(--BODY-BGCOLOR);
     color: var(--BODY-COLOR);
+}
+body.dark img{
+    filter: invert(100%)
 }
 h3{
     text-align: center;
@@ -56,7 +58,9 @@ h3{
     text-align: justify;
     text-justify: inter-word;
   }
-
+svg{
+    fill: whitesmoke;
+}
 .fixed {
     background-color: var(--BODY-BGCOLOR);
 }

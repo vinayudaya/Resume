@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
 </head>
-  <body id="Home">
+  <body id="Home" class="light">
       <nav class="navbar fixed-top fixed">
         <div class="container fluid fixed" id="nav1">
             <header class="d-flex justify-content-center  ">
@@ -17,6 +17,9 @@
                 <li class="nav-item "><a href="#Skills" class="nav-link ">Skills</a></li>
                 <li class="nav-item"><a href="#Education" class="nav-link">Education</a></li>
                 <li class="nav-item"><a href="#Coursework" class="nav-link">Coursework</a></li>
+                <li class="nav-item">  <button class="nav-link" onclick="toggleTheme()">
+                  <img id="themeIcon" src="light-icon.svg" alt="Theme Icon">
+                </button></li>
               </ul>
             </header>
           </div>
@@ -289,8 +292,21 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script>
+    <script defer>
       document.getElementById("year").innerHTML = (new Date().getFullYear());
+      function toggleTheme() {
+      const body = document.body;
+      const themeIcon = document.getElementById('themeIcon');
+      if (body.classList.contains('light')) {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        themeIcon.src = 'dark-icon.svg'; 
+      } else {
+        body.classList.remove('dark');
+        body.classList.add('light');
+        themeIcon.src = 'light-icon.svg'; 
+      }
+    }
     </script>
 </body>
   
